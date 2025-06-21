@@ -59,7 +59,7 @@ const ItemModel = ({ item, isOpen, onClose, onEnquire }) => {
               <img
                 src={item.additionalImages[currentImageIndex]}
                 alt={`${item.name} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full  object-cover"
+                className="w-full h-full object-auto transition-transform duration-300"
                 onError={(e) => {
                   e.target.src = 'https://via.placeholder.com/800x450?text=Image+Not+Found';
                 }}
