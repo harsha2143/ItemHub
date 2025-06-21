@@ -26,7 +26,8 @@ router.post('/items', async (req, res) => {
 // Send enquiry (mock implementation)
 router.post('/enquiry', async (req, res) => {
   try {
-    // In a real app, implement email sending logic (e.g., using Nodemailer)
+    // In a real app, implement this email sending logic using Nodemailer or any other.
+    //
     console.log('Enquiry received:', req.body);
     res.json({ success: true, message: 'Enquiry sent successfully' });
   } catch (error) {

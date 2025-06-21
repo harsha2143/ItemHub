@@ -12,7 +12,7 @@ const ViewItems = ({ items, loading, onItemClick }) => {
 
   return (
     <div>
-      <div className="mb-8">
+      <div className="mb-8 mt-16 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Collection</h2>
         <p className="text-gray-600">Discover amazing items in our inventory ({items.length} items)</p>
       </div>

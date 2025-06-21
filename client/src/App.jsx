@@ -15,7 +15,7 @@ const App = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // Load items from MongoDB on component mount
+  // Load items from MongoDB
   useEffect(() => {
     loadItems();
   }, []);

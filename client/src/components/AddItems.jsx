@@ -83,7 +83,7 @@ const AddItems = ({ onItemAdded }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto mb-16 px-4 sm:px-6 lg:px-8 py-8 mt-8">
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Add New Item</h2>
         <p className="text-gray-600">Fill in the details to add a new item to your collection</p>
@@ -99,8 +99,8 @@ const AddItems = ({ onItemAdded }) => {
             type="text"
             value={formData.name}
             onChange={(e) => handleFormChange('name', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-            placeholder="Enter item name"
+            className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+            placeholder="Enter name of the item"
             disabled={loading}
           />
         </div>
@@ -113,10 +113,10 @@ const AddItems = ({ onItemAdded }) => {
           <select
             value={formData.type}
             onChange={(e) => handleFormChange('type', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
             disabled={loading}
           >
-            <option value="">Select item type</option>
+            <option value="">Select type</option>
             {itemTypes.map((type) => (
               <option key={type} value={type}>{type}</option>
             ))}
@@ -132,8 +132,8 @@ const AddItems = ({ onItemAdded }) => {
             value={formData.description}
             onChange={(e) => handleFormChange('description', e.target.value)}
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
-            placeholder="Describe the item in detail"
+            className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+            placeholder="Describe the details of the item"
             disabled={loading}
           />
         </div>
@@ -147,8 +147,8 @@ const AddItems = ({ onItemAdded }) => {
             type="url"
             value={formData.coverImage}
             onChange={(e) => handleFormChange('coverImage', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-            placeholder="https://example.com/image.jpg"
+            className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+            placeholder="Enter the URL of the cover image"
             disabled={loading}
           />
         </div>
@@ -164,8 +164,8 @@ const AddItems = ({ onItemAdded }) => {
                 type="url"
                 value={image}
                 onChange={(e) => handleAdditionalImageChange(index, e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-                placeholder="https://example.com/additional-image.jpg"
+                className="flex-1 px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                placeholder="Additional image URLs"
                 disabled={loading}
               />
               {formData.additionalImages.length > 1 && (

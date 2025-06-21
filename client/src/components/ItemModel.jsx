@@ -46,7 +46,7 @@ const ItemModel = ({ item, isOpen, onClose, onEnquire }) => {
               setCurrentImageIndex(0);
               onClose();
             }}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-2 bg-blue-200 hover:bg-gray-500 rounded-full transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
