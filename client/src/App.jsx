@@ -20,17 +20,19 @@ const App = () => {
     loadItems();
   }, []);
 
-  const loadItems = async () => {
-    setLoading(true);
-    try {
-      const fetchedItems = await apiService.fetchItems();
-      setItems(fetchedItems);
-    } catch (error) {
-      console.error('Error loading items:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+const loadItems = async () => {
+  setLoading(true);
+  try {
+    const fetchedItems = await apiService.fetchItems();
+    setItems(fetchedItems);
+  } catch (error) {
+    console.error('Error loading items:', error);
+    setSuccessMessage('Failed to load items. Please try again.');
+    setShowSuccess(true); // Reuse success message for errors
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleItemAdded = (newItem) => {
     setItems(prev => [...prev, newItem]);
