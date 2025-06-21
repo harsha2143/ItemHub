@@ -59,7 +59,7 @@ const ItemModel = ({ item, isOpen, onClose, onEnquire }) => {
               <img
                 src={item.additionalImages[currentImageIndex]}
                 alt={`${item.name} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full  object-cover"
                 onError={(e) => {
                   e.target.src = 'https://via.placeholder.com/800x450?text=Image+Not+Found';
                 }}
@@ -70,13 +70,13 @@ const ItemModel = ({ item, isOpen, onClose, onEnquire }) => {
               <>
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full shadow-lg transition-all"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
